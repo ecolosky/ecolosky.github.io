@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Icon import -->
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Edward Colosky's Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="theme.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="navbar-brand" href="#">
+            <span class="glyphicon glyphicon-console" aria-hidden="true"></span>
+            <span class="glyphicon-class">Edward Colosky's Page</span>
+          </div>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a id="home">
+              <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+              <span class="tab">Home</span>
+            </a></li>
+            <li><a id ="about">
+              <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+              <span class="tab">About Me</span>
+            </a></li>
+            <li><a id="contact">
+              <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+              <span class="tab">Contact Me</span>
+            </a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div id="mainPg" class="container theme-showcase" role="main">
+      <div class="contactPage">
+        <div class="page-header">
+          <h1>Contact Me</h1>
+        </div>
+        <div class="row ContactInfo">
+          <div class = "col-md-4 pic">
+            <img id="profilePic" data-src="holder.js/200x200" class="img-thumbnail" alt="200x200" style="width: 200px; height: 200px;" src="img/thumbPic.png" data-holder-rendered="true">
+          </div>
+          <div class="col-md-8">
+            <ul class="list-group">
+              <li class="list-group-item active">
+                <span class = "Name">Edward Colosky</span>
+              </li>
+              <li class="list-group-item">
+                <div class="row Contact">
+                  <span class="contTitle">Email Address:</span>
+                  <span class="contInfo">ColoskyE@gmail.com</span>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row Contact">
+                  <span class="contTitle">Phone Number:</span>
+                  <span class="contInfo">(585) 760-9060</span>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row Contact">
+                  <span class="contTitle">Address:</span>
+                  <span class="contInfo">2105 15th Street Troy, NY 12180</span>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="contactButtons">
+                  <a href="mailto:coloskye@gmail.com" id = "mailBtn" type="button" class="btn btn-primary btn-lg">
+                    <span class="glyphicon bttn glyphicon-envelope" aria-hidden="true"></span>
+                    <span class="glyphicon-class">Email</span>
+                  </a>
+                  <a href="tel:15857609060"id = "phoneBtn" type="button" class="btn btn-primary btn-lg">
+                    <span class="glyphicon bttn glyphicon-earphone" aria-hidden="true"></span>
+                    <span class="glyphicon-class">Call</span>
+                  </a>
+                  <a href="https://www.linkedin.com/in/edward-colosky-b600a868"id = "inBtn" type="button" class="btn btn-primary btn-lg">
+                    <span class="fa fa-linkedin"></span>
+                    <span class="glyphicon-class">LinkedIn</span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="aboutPage">
+        <div class="page-header">
+          <h1>Edward W. Colosky</h1>
+        </div>
+          <div class = "row pTop">
+            <div class = "col-md-4 pic">
+              <img id="profilePic" data-src="holder.js/200x200" class="img-thumbnail" alt="200x200" style="width: 200px; height: 200px;" src="img/thumbPic.png" data-holder-rendered="true">
+            </div>
+            <div class="col-md-8 wraper col-xs-12">
+              <div id="aboutGroup" class = "col-md-10 col-xs-12">
+                <div class="list-group edu">
+                  <div class="list-group-item active edu">
+                    <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+                    <span class="h3">Education</span>
+                  </div>
+                  <div class="list-group-item">
+                    <H4>Rensselaer Polytechnic Institute, Troy, NY</H4>
+                    <h4>Bachelor of Science, Graduating May 2016</h4>
+                    <h4>Major in Computer Science</h4>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="page-header">
+          <h1>About Me</h1>
+        </div>
+        <div class = "row well-wrapper">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="well">
+              <p>
+                I have been involved with computers for the majority of my life. At a young age I enjoyed tinkering with the insides of computers, with at first little to no success. This grew into a hobby of implementing obscure 3rd party software and constructing my own personal computers. Curiosity slowly grew the hobby into an addiction, and led to software development. The third party software I used showed weaknesses that demonstrated to me the need for improvements both in stability and usability.
+              </p>
+              <p>
+                I started programming in Java my junior year of high school. This robust language gave me a taste of something I craved, the ability to make something that was my own. The next big step was my entrance into Rensselaer Polytechnic Institute as a major in computer science. The college setting thoroughly stimulated my craving for programming, both in intensity and breadth of usages. These four years gave me exposure to new languages, frameworks, design patterns, and ideas that were beyond my existing knowledge.
+              </p>
+              <p>
+                The next step for me is software development in a professional setting. I am looking for an fast paced agile team of developers that need an entry level developer. I have experience throughout the full stack of development and the curiosity to learn new tricks of the trade. I have also been exposed to agile methodologies and version control from group work at school. If you have any questions or would like to contact me please refer to the last tab, thank you.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="page-header">
+          <h1>Skills</h1>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="list-group">
+              <div class="list-group-item active">
+                <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                <span class="h3">Platforms</span>
+              </div>
+              <div class="list-group-item">
+                <div class = "row">
+                  <img class="img-thumbnail"  style="width: 64px; height: 64px;" src="img/win_64.png" data-holder-rendered="true">
+                  <span class="skillDesc">Windows</span>
+                  <ul class="details">
+                    <li>7</li>
+                    <li>8/8.1</li>
+                    <li>10</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="list-group-item">
+                <div class = "row">
+                  <img class="img-thumbnail"  style="width: 64px; height: 64px;" src="img/linux_64.png" data-holder-rendered="true">
+                  <span class="skillDesc">Linux</span>
+                  <ul class="details">
+                    <li>Mint</li>
+                    <li>Ubuntu</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="list-group-item">
+                <div class = "row">
+                  <img class="img-thumbnail"  style="width: 64px; height: 64px;" src="img/android_64.png" data-holder-rendered="true">
+                  <span class="skillDesc">Andriod</span>
+                </div>
+              </div>
+            </div>
+          </div><!-- /.col-md-4 -->
+          <div class="col-md-4">
+            <div class="list-group">
+              <div class="list-group-item active">
+                <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                <span class="h3">Front end development</span>
+              </div>
+              <div class="list-group-item">
+                <div class = "row">
+                  <img class="img-thumbnail"  style="width: 64px; height: 64px;" src="img/HTML5_64.png" data-holder-rendered="true">
+                  <span class="skillDesc">HTML</span>
+                </div>
+              </div>
+              <div class="list-group-item">
+                <div class = "row">
+                  <img class="img-thumbnail"  style="width: 64px; height: 64px;" src="img/css_64.png" data-holder-rendered="true">
+                  <span class="skillDesc">CSS</span>
+                </div>
+              </div>
+             <div class="list-group-item">
+               <div class = "row">
+                  <img class="img-thumbnail"  style="width: 64px; height: 64px;" src="img/js_64.png" data-holder-rendered="true">
+                  <span class="skillDesc">JavaScript</span>
+                </div>
+              </div>
+            </div>
+          </div><!-- /.col-md-4 -->
+          <!-- General Purpose Languages -->
+          <div class="col-md-4">
+            <div class="list-group">
+              <div class="list-group-item active">
+                <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                <span class="h3">General-purpose</span>
+              </div>
+              <div class="list-group-item">
+                <div class = "row">
+
+                    <img class="img-thumbnail"  style="width: 64px; height: 64px;" src="img/python_64.png" data-holder-rendered="true">
+
+                    <span class="skillDesc">Python</span>
+                    <ul class="details">
+                      <li>NumPy</li>
+                    </ul>
+                </div>
+              </div>
+              <div class="list-group-item">
+                <div class = "row">
+                  <img class="img-thumbnail"  style="width: 64px; height: 64px;" src="img/c++_64.png" data-holder-rendered="true">
+                  <span class="skillDesc">C++</span>
+                  <ul class="details">
+                    <li>Standard Library</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="list-group-item">
+                <div class = "row">
+                  <img class="img-thumbnail"  style="width: 64px; height: 64px;" src="img/java_64.png" data-holder-rendered="true">
+                  <span class="skillDesc">Java</span>
+                  <ul class="details">
+                    <li>Java Database Connectivity</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div><!-- /.col-md-4 -->
+
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="list-group">
+
+              <!-- software & IDEs -->
+
+              <div class="list-group-item active">
+                <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                <span class="h3">IDEs and editors</span>
+              </div>
+               <div class="list-group-item">
+                <div class = "row">
+                  <img class="img-thumbnail"  style="width: 64px; height: 64px;" src="img/sublime_64.png" data-holder-rendered="true">
+                  <span class="skillDesc">Sublime Text</span>
+                </div>
+              </div>
+
+
+               <div class="list-group-item">
+                <div class = "row">
+                  <img class="img-thumbnail"  style="width: 64px; height: 64px;" src="img/wing_64.png" data-holder-rendered="true">
+                  <span class="skillDesc">Wing IDE</span>
+                </div>
+              </div>
+
+               <div class="list-group-item">
+                <div class = "row">
+                  <img class="img-thumbnail"  style="width: 64px; height: 64px;" src="img/eclipse_64.png" data-holder-rendered="true">
+                  <span class="skillDesc">Eclipse IDE</span>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+              <!-- Back end column -->
+          <div class="col-md-4">
+            <div class="list-group">
+              <div class="list-group-item active">
+                <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                <span class="h3">Back end development</span>
+              </div>
+              <div class="list-group-item">
+                <div class = "row">
+                  <img class="img-thumbnail"  style="width: 64px; height: 64px;" src="img/nodejs_64.png" data-holder-rendered="true">
+                  <span class="skillDesc">Node.JS</span>
+
+                </div>
+              </div>
+              <div class="list-group-item">
+                <div class = "row">
+                  <img class="img-thumbnail"  style="width: 64px; height: 64px;" src="img/web2py_64.png" data-holder-rendered="true">
+                  <span class="skillDesc">WEB2PY</span>
+                </div>
+              </div>
+
+               <div class="list-group-item">
+                <div class = "row">
+                  <img class="img-thumbnail"  style="width: 64px; height: 64px;" src="img/mysql_64.png" data-holder-rendered="true">
+                  <span class="skillDesc">MySQL Database</span>
+                </div>
+              </div>
+
+               <div class="list-group-item">
+                <div class = "row">
+                  <img class="img-thumbnail"  style="width: 64px; height: 64px;" src="img/php_64.png" data-holder-rendered="true">
+                  <span class="skillDesc">phpMyAdmin</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Other software column -->
+          <div class="col-md-4">
+            <div class="list-group">
+              <div class="list-group-item active">
+                <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                <span class="h3">Other software</span>
+              </div>
+
+              <div class="list-group-item">
+                <div class = "row">
+
+                  <img class="img-thumbnail"  style="width: 64px; height: 64px;" src="img/office_64.png" data-holder-rendered="true">
+                  <span class="skillDesc">Microsoft Office</span>
+                  <ul class="details">
+                  <li>Excel</li>
+                   <li>Word</li>
+                  <li>Publisher</li>
+                  <li>PowerPoint</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="list-group-item">
+                <div class = "row">
+                  <img class="img-thumbnail"  style="width: 64px; height: 64px;" src="img/openOffice_64.png" data-holder-rendered="true">
+                  <span class="skillDesc">Libre Office</span>
+                  <ul class="details">
+                  <li>Writer</li>
+                   <li>Calc</li>
+                  <li>Impress</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="list-group-item">
+                <div class = "row">
+                  <img class="img-thumbnail"  style="width: 64px; height: 64px;" src="img/git_64.png" data-holder-rendered="true">
+                  <span class="skillDesc">Git Version Control</span>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        <!-- 2nd row close -->
+        </div>
+
+
+      <!-- about page close -->
+      </div>
+
+      <div class="homePage">
+        <div class="page-header">
+          <h1>Gallery of Work</h1>
+        </div>
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="well">
+              <p>Hello and welcome to my website, this page showcases some of the work that I have done over the past year.
+                 All of these projects are custom designed solutions that use a
+                 variety of technologies to accomplish the task. The user interfaces are designed to be
+                 intuitive as well as appealing to the eye. The back end servers are
+                 built to be reliable and flexible for the addition of new functionality. If you have any questions about me or my work please feel free to contact me via the last tab.
+               </p>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <!-- explanation -->
+        <div id = "reconRallyInfo" class="row">
+          <div class="page-header">
+            <h1>Rensselaer Tour Guide App</h1>
+          </div>
+          <!-- photo carousel -->
+          <div class="col-md-6 car">
+            <div id="carouselReconRally" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselReconRally" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselReconRally" data-slide-to="1"></li>
+                <li data-target="#carouselReconRally" data-slide-to="2"></li>
+                <li data-target="#carouselReconRally" data-slide-to="3"></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="img/reconRally01.png" alt="First slide">
+                </div>
+                <div class="item">
+                  <img src="img/reconRally02.png" alt="Second slide">
+                </div>
+                <div class="item">
+                  <img src="img/reconRally04.png" alt="Third slide">
+                </div>
+                <div class="item">
+                  <img src="img/reconRally03.png" alt="Fourth">
+                </div>
+              </div>
+              <a class="left carousel-control" href="#carouselReconRally" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#carouselReconRally" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+          <!-- info -->
+          <div class="col-md-6">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Features</h3>
+              </div>
+              <div class="panel-body">
+                <ul>
+                  <li>The first tab is a campus map image overlaid on a Google map to show the user's location.</li>
+                  <li>The second tab is a QR scanner used to scan codes at each destination.</li>
+                  <li>Finally a modal then displays the information about the building.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Front End Technologies Used</h3>
+              </div>
+              <div class="panel-body">
+                <ul>
+                  <li>This cross platform app is built using Intel XDK and consists of HTML, CSS, JS, and an XML file.</li>
+                  <li>Bootstrap is the framework for the app's view.</li>
+                  <li>The map tab utilizes the Google maps Java Script API.</li>
+                  <li>The QR scanner uses Apache Cordova's bar code scanner.</li>
+                  <li>The modal is populated via a JSON structure.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Back End Technologies Used</h3>
+              </div>
+              <div class="panel-body">
+                <ul>
+                  <li>The database is a non relational structure that is built with MongoDB.</li>
+                  <li>The server uses Node.JS for processing requests and database extraction.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- close row -->
+        </div>
+
+
+        <div id="heatSeekerInfo" class="row">
+          <div class="page-header">
+            <h1>Heat Seeker App</h1>
+          </div>
+          <!-- photo carousel -->
+          <div class="col-md-6 car">
+            <div id="carouselHeatSeeker" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselHeatSeeker" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselHeatSeeker" data-slide-to="1"></li>
+                <li data-target="#carouselHeatSeeker" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="img/heatSeeker01.png" alt="First slide">
+                </div>
+                <div class="item">
+                  <img src="img/heatSeeker02.png" alt="Second slide">
+                </div>
+                <div class="item">
+                  <img src="img/heatSeeker03.png" alt="third">
+                </div>
+              </div>
+              <a class="left carousel-control" href="#carouselHeatSeeker" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#carouselHeatSeeker" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+          <!-- explanation -->
+          <div class="col-md-6 car">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Features</h3>
+              </div>
+              <div class="panel-body">
+                <ul>
+                  <li>The radar social map features anonymously uploaded locations that will give real time analytics to the user about the quality and quantity of other users.</li>
+                  <li>Photo/Check-in Button is where users click to take a photo of their surroundings, in social media trends users tend to like to show off the places they frequent.</li>
+                  <li>The Feed page is where users can browse photos taken by other users within a preference set radius. This allows users to stay in touch with other people on the app.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Front End Technologies Used</h3>
+              </div>
+              <div class="panel-body">
+                <ul>
+                  <li>This app is built using Adobe PhoneGap which creates a cross platform app from HTML, CSS, and JS scripts.</li>
+                  <li>Framework 7 is the core infrastructure used in the creation of the view.</li>
+                  <li>Google maps API was used in the construction of the radar social map. The map is then overlaid with the heat map feature to show activity.</li>
+                  <li>The check-in feature uses the Apache Cordova plug-in to take pictures using the devices camera.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Back End Technologies Used</h3>
+              </div>
+              <div class="panel-body">
+                <ul>
+                  <li>The data for Heat Seeker is stored in a MySQL database.</li>
+                  <li>WEB2PY is used as the server responsible for populating the app with content. The server also acts as a controller to update the data model.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        <!-- row close -->
+        </div>
+
+      </div>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src = "js/site.js"></script>
+    <!-- <script src="../../assets/js/docs.min.js"></script> -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

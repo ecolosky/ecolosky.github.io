@@ -1,0 +1,171 @@
+
+@media (min-width: 450px) {
+	.carousel.slide {
+		width: 422px;
+		margin: auto;
+	}
+	.list-group.edu {
+		margin-top: 35px;
+	}
+
+	span.glyphicon.glyphicon-education{
+		font-size: 1.5em;
+	}
+	span.glyphicon.glyphicon-th-list {
+	font-size: 1.5em;
+	}
+	span.glyphicon {
+	margin-right: .8vw;
+	}
+	.container.theme-showcase {
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+	}
+	.col-md-6 {
+		padding-top: 1vh;
+	}
+	.col-md-2 {
+		padding-top: 1vh;
+	}
+	.row.pTop {
+	 text-align: center;
+	}
+	.row.ContactInfo{
+		text-align: center;
+	}
+	/*contact page css*/
+	.btn.btn-primary.btn-lg {
+		margin-left: .2em;
+		margin-right: .2em;
+	}
+	span.contInfo {
+		margin-left: 1em;
+	}
+	.col-md-4.pic {
+		padding-bottom: 20px;
+		padding-top: 20px;
+	}
+	span.Name {
+		font-size: 1.7em;
+	}
+	img#profilePic {
+		vertical-align: text-top;
+	}
+	.row.Contact {
+		text-align: center;
+		font-size: 1.3em;
+	}
+	span.glyphicon-class {
+		font-size: .9em;
+		margin-left: .2em;
+	}
+	span.bttn.glyphicon {
+		vertical-align: text-top;
+		margin-right: 0px;
+	}
+	span.fa.fa-linkedin {
+		vertical-align: text-top;
+	}
+	.row{
+		margin: auto;
+	}
+	span.skillDesc {
+		margin-left: 1em;
+		font-size: 1.3em;
+	}
+	.details{
+		margin-left: 5em;
+		font-size: 1.1em;
+		margin-top: -1.4em;
+	}
+	/*wells*/
+	.well {
+		background-image: linear-gradient(to bottom,#3277b4 0,#337ab7 100%);
+		color: white;
+		font-size: 115%;
+	}
+}
+@media (max-width: 449px) {
+	/*phone wells*/
+	.well {
+		background-image: linear-gradient(to bottom,#3277b4 0,#337ab7 100%);
+		color: white;
+	}
+	/*Phone css*/
+	body {
+		margin-top: 8vh;
+	}
+	h1 {
+		font-size: 2em;
+		text-align: center;
+	}
+	.page-header {
+		margin-top: 1vh;
+	}
+	.panel.panel-primary {
+		margin-top: 3vh;
+	}
+	div#carouselReconRally {
+		width: 80%;
+		margin: auto;
+		text-align: center;
+	}
+	div#carouselHeatSeeker {
+		width: 80%;
+		margin: auto;
+		text-align: center;
+	}
+	.col-md-4.pic {
+		text-align: center;
+		margin-bottom: 2vh;
+	}
+	span.glyphicon.glyphicon-education{
+		font-size: 1.5em;
+	}
+	span.glyphicon.glyphicon-th-list {
+	font-size: 1.5em;
+	}
+	span.glyphicon {
+	margin-right: .8vw;
+	}
+	.list-group.edu {
+	text-align: center;
+	}
+	h4 {
+	font-size: 1.0em;
+	}
+	span.h3 {
+	font-size: 1.4em;
+	}
+	.row {
+	margin: auto;
+	}
+	ul.details {
+	margin-left: 65px;
+	margin-top: -20px;
+	}
+	span.skillDesc {
+	margin-left: 1em;
+	}
+	div#aboutGroup {
+	padding-left: 0px;
+	padding-right: 0px;
+	}
+	span.Name {
+	font-size: 1.2em;
+	}
+	.btn.btn-primary.btn-lg {
+	font-size: 1em;
+	}
+	span.glyphicon-class {
+		font-size: .9em;
+		margin-left: .2em;
+	}
+	span.bttn.glyphicon {
+		vertical-align: text-top;
+		margin-right: 0px;
+	}
+	span.fa.fa-linkedin {
+		vertical-align: text-top;
+	}
+}
