@@ -18,6 +18,7 @@ function init(){
         $(".aboutPage").hide();
 				$("body").scrollTop(0);
 
+
     });
 
     $("#about").click(function(){
@@ -25,12 +26,18 @@ function init(){
         $(".contactPage").hide();
         $(".aboutPage").show();
 				$("body").scrollTop(0);
-    });
 
-    $("#contact").click(function(){
+    });
+		function contactMe(){
         $(".homePage").hide();
         $(".aboutPage").hide();
         $(".contactPage").show();
 				$("body").scrollTop(0);
-    });
+				
+    }
+		$(document).click(function(){
+			$("#navbar").collapse('hide');
+		});
+		$(".contactLink").click(contactMe);
+    $("#contact").click(contactMe);
 }
