@@ -3,15 +3,30 @@ a.contactLink {
 	color: white;
 	text-decoration: underline;
 }
+.carousel-indicators li {
+    border: 1px solid rgba(0,0,0,0.5);
+}
+.carousel-indicators li.active {
+    background-color: rgba(0,0,0,0.1);
+}
+
 
 @media (min-width: 450px) {
 	.carousel.slide {
 		width: 422px;
 		margin: auto;
 	}
+	div#carouselStockPile {
+		width: 375px;
+		margin: auto;
+	}
+	ol.carousel-indicators {
+	    margin-bottom: -45px;
+	}
 	.list-group.edu {
 		margin-top: 35px;
 	}
+
 
 	span.glyphicon.glyphicon-education{
 		font-size: 1.5em;
@@ -119,6 +134,14 @@ a.contactLink {
 		width: 80%;
 		margin: auto;
 		text-align: center;
+	}
+	div#carouselStockPile {
+		width: 80%;
+		margin: auto;
+		text-align: center;
+	}
+	ol.carousel-indicators {
+	    margin-bottom: -30px;
 	}
 	.col-md-4.pic {
 		text-align: center;
