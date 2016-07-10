@@ -4,7 +4,7 @@
 //      July, 2016
 //=============================================================================
 var div = document.createElement('div');
-div.setAttribute('ng-controller', 'AController');
+div.setAttribute('ng-controller', 'Controller');
 div.innerHTML = '<ul><li ng-repeat="view in views"> {{view}}</li></ul>';
 document.body.appendChild(div);
 
