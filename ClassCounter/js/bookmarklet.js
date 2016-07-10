@@ -68,8 +68,8 @@
   // Loading the scripts
   loadScripts([
     'https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js',
-    appRoot + 'js/init.js',
-    appRoot + 'js/controller.js'
+    appRoot + 'js/controller.js',
+    appRoot + 'js/init'
   ], function() {
     // Initialization of angular app
     angular.element(document).ready(function() {
