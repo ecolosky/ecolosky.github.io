@@ -68,6 +68,7 @@
   // Loading the scripts
   loadScripts([
     'https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js',
+    appRoot + 'angular-ui-bootstrap/dist/ui-bootstrap-tpls.js',
     appRoot + 'js/init.js',
     appRoot + 'js/controller.js'
   ], function() {
