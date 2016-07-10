@@ -49,7 +49,7 @@
   var loadStyles = function(csss) {
     var css, i, len;
     for (i = 0, len = csss.length; i < len; i++) {
-      css = csss[_i];
+      css = csss[i];
       var e = document.createElement('link');
       e.setAttribute('rel','stylesheet');
       e.setAttribute('href', css);
