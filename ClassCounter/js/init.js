@@ -12,7 +12,7 @@ content += '<script type="text/javascript" src="angular-ui-bootstrap/dist/ui-boo
 div.innerHTML = content;
 document.body.appendChild(div);
 
-var app = angular.module('bookmarklet', []);
+var app = angular.module('bookmarklet', ['ui.bootstrap']);
 
 app.run(function ($rootScope) {
   $rootScope.URL = location.href;
