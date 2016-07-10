@@ -3,6 +3,6 @@
 //      Ed Colosky
 //      July, 2016
 //=============================================================================
-app.controller('Controller', function($scope, $http) {
+app.controller('AController', function($scope, $http) {
   $scope.views = ['a', 'b', 'c'];
 });
