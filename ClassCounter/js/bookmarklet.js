@@ -47,8 +47,8 @@
   };
   // Load a list of styles
   var loadStyles = function(csss) {
-    var css, _i, _len;
-    for (_i = 0, _len = csss.length; _i < _len; _i++) {
+    var css, i, len;
+    for (i = 0, len = csss.length; i < len; i++) {
       css = csss[_i];
       var e = document.createElement('link');
       e.setAttribute('rel','stylesheet');

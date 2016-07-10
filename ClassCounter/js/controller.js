@@ -1,4 +1,8 @@
-app.controller('AController', function($scope, $http) {
-  // here you can use $scope.URL which is the actual site from JavaScript's location.href
+// =============================================================================
+//      Angular JS controller for bookmarklet
+//      Ed Colosky
+//      July, 2016
+//=============================================================================
+app.controller('Controller', function($scope, $http) {
   $scope.views = ['a', 'b', 'c'];
 });

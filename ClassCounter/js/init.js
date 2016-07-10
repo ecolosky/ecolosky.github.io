@@ -1,6 +1,11 @@
+// =============================================================================
+//      JS script for appending content
+//      Ed Colosky
+//      July, 2016
+//=============================================================================
 var div = document.createElement('div');
 div.setAttribute('ng-controller', 'AController');
-div.innerHTML = '<div ng-repeat="view in views" id="{{view}}">';
+div.innerHTML = '<ul><li ng-repeat="view in views"> {{view}}</li></ul>';
 document.body.appendChild(div);
 
 var app = angular.module('bookmarklet', []);
