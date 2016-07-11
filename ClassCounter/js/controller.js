@@ -5,5 +5,5 @@
 //=============================================================================
 app.controller('AController', function($scope, $http) {
   $scope.views = ['a', 'b', 'c'];
-  $scope.rootDiv = document.querySelectorAll("*");
+  // $scope.rootDiv = document.querySelectorAll("*");
 });
