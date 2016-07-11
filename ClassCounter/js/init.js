@@ -9,7 +9,7 @@ var content = '<ul>';
 content += '<li ng-repeat="view in views"> {{view}}</li>';
 content += '</ul>';
 div.innerHTML = content;
-var rootDiv = document.querySelector("*");
+var rootDiv = document.body.firstChild;
 console.log(rootDiv);
 document.body.insertBefore(div,rootDiv);
 var app = angular.module('bookmarklet', []);
