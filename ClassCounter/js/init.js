@@ -6,7 +6,7 @@
 var div = document.createElement('div');
 div.setAttribute('ng-controller', 'AController');
 var content = '<ul>';
-content += '<li ng-repeat="view in views"> {{view}}</li>';
+content += '<li ng-repeat="class in classArr"> {{class.class}} - {{class.count}}</li>';
 content += '</ul>';
 div.innerHTML = content;
 var rootDiv = document.body.firstChild;
