@@ -5,9 +5,9 @@
 //=============================================================================
 var div = document.createElement('div');
 div.setAttribute('ng-controller', 'AController');
-var content = '<ul>';
-content += '<li ng-repeat="class in classArr"> {{class.class}} - {{class.count}}</li>';
-content += '</ul>';
+var content = '<div ng-repeat = "grp in groups">';
+content += '<span ng-repeat="word in grp" class="label {{word.color}}" style="font-size: {{word.size}};">{{word.class}}</span>';
+content += '</div>';
 div.innerHTML = content;
 var rootDiv = document.body.firstChild;
 console.log(rootDiv);

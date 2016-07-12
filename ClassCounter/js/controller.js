@@ -6,23 +6,48 @@
 app.controller('AController', function($scope, $http) {
   $scope.views = ['a', 'b', 'c'];
   // populate class objects
-  $scope.classArr = [];
-  var found = false;
+  var classes = {};
+  // var found = false;
     [].forEach.call(document.querySelectorAll("*"), function(element) {
       if (element.className) {
         var tempClassArr = element.className.split(" ");
-        for (var i = 0; i < tempClassArr.length; i++) {
-          found = false;
-          for(var x = 0; x < $scope.classArr.length; x++){
-            if (tempClassArr[i] == $scope.classArr[x].class) {
-              $scope.classArr[x].count = $scope.classArr[x].count + 1;
-              found = true;
-              break
-            }
+        for(i in tempClassArr) {
+          if (tempClassArr[i] in classes) {
+            classes[tempClassArr[i]] ++;
+          }else{
+            classes[tempClassArr[i]] = 1;
           }
-          if(found == false){$scope.classArr.push({class: tempClassArr[i], count: 1});}
         }
       }
     });
+    //group by frequency
+    var groups = [];
+    for(key in classes){
+      // i will be equal to the count of each class - 1
+      var i = classes[key]-1;
+      // generate index if needed
+      while(groups[i] == undefined){
+        groups.push({classes: []});
+      }
+      groups[i].classes.push(key);
+    }
+    var colorPicker = groups.length-1;
+    for(grp in groups){
+      groups[grp].classes.sort();
+      groups[grp].count = grp+1;
+      if(colorPicker % 2 == 0){
+        // set to blue
+        groups[grp].color = "label-primary"
+      }
+      else{
+        // set to yellow
+        groups[grp].color = "label-warning"
+      }
+      // set size of text
+      groups[grp].size = 34 - (2*groups.length) + (grp *2)
 
+      colorPicker --;
+    }
+    groups.reverse();
+    $scope.groups = groups;
 });
