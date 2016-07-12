@@ -21,33 +21,35 @@ app.controller('AController', function($scope, $http) {
       }
     });
     //group by frequency
-    var groups = [];
+    var groupsModel = [];
     for(key in classes){
+      console.log(key);
       // i will be equal to the count of each class - 1
       var i = classes[key]-1;
       // generate index if needed
-      while(groups[i] == undefined){
-        groups.push({classes: []});
+      while(groupsModel[i] == undefined){
+        groupsModel.push({classes: []});
       }
-      groups[i].classes.push(key);
+      groupsModel[i].classes.push(key);
     }
-    var colorPicker = groups.length-1;
-    for(grp in groups){
-      groups[grp].classes.sort();
-      groups[grp].count = grp+1;
+    var colorPicker = groupsModel.length-1;
+    for(grp in groupsModel){
+      groupsModel[grp].classes.sort();
+      groupsModel[grp].count = grp+1;
       if(colorPicker % 2 == 0){
         // set to blue
-        groups[grp].color = "label-primary"
+        groupsModel[grp].color = "label-primary"
       }
       else{
         // set to yellow
-        groups[grp].color = "label-warning"
+        groupsModel[grp].color = "label-warning"
       }
       // set size of text
-      groups[grp].size = 34 - (2*groups.length) + (grp *2)
+      groupsModel[grp].size = 34 - (2*groupsModel.length) + (grp *2)
 
       colorPicker --;
+      console.log(grp);
     }
-    groups.reverse();
-    $scope.groups = groups;
+    groupsModel.reverse();
+    $scope.groupsView = groupsModel;
 });
