@@ -14,6 +14,7 @@ console.log(rootDiv);
 document.body.insertBefore(div,rootDiv);
 var app = angular.module('bookmarklet', []);
 
+
 app.run(function ($rootScope) {
   $rootScope.URL = location.href;
 });

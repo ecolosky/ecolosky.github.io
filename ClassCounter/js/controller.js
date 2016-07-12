@@ -32,6 +32,7 @@ app.controller('AController', function($scope, $http) {
       }
       groupsModel[i].classes.push(key);
     }
+    
     var colorPicker = groupsModel.length-1;
     for(grp in groupsModel){
       groupsModel[grp].classes.sort();
