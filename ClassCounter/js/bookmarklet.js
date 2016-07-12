@@ -57,7 +57,7 @@
     }
   };
 
-  var appRoot = 'http://edcolosky.com/ClassCounter/';
+  var appRoot = 'http://localhost:8080/ClassCounter/';
 
   // Loading style definitions
   loadStyles([
