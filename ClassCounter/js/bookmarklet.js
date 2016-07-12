@@ -33,6 +33,7 @@
     document.head.appendChild(script);
   }
 
+
   // Load a list of scripts
   var loadScripts = function(scripts, cb) {
     var script;
@@ -65,17 +66,20 @@
     appRoot + 'css/style.css'
   ]);
 
+
   // Loading the scripts
   loadScripts([
     'https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js',
     // appRoot + 'angular-ui-bootstrap/dist/ui-bootstrap-tpls.js',
+    appRoot + 'js/analyzer.js',
     appRoot + 'js/init.js',
     appRoot + 'js/controller.js'
   ], function() {
     // Initialization of angular app
-    angular.element(document).ready(function() {
+    angular.element(document).ready(function($scope) {
       angular.bootstrap(document, ['bookmarklet']);
     });
   });
+
 
 })();

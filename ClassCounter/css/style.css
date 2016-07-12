@@ -1,6 +1,6 @@
 .bookmarklet.outer {
     position: absolute;
-    z-index: 10;
+    z-index: 1000;
     background-color: white;
     width: 100vw;
     padding-top: 5px;

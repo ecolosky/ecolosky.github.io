@@ -1,11 +1,14 @@
 // =============================================================================
-//      JS script for appending content
+//      JS script for
+//          1) analysing css classes
+//          2) appending HTML content
 //      Ed Colosky
 //      July, 2016
 //=============================================================================
+// append new div for population
 var div = document.createElement('div');
 div.setAttribute('ng-controller', 'AController');
-var content = '<div class="bookmarklet outer">';
+var content = '<div class="bookmarklet outer" >';
 content += '<div class = "bookmarklet header"><h2><b>Class</b>Counter</h2></div>';
 content += '<div class = "bookmarklet inner">';
 content += '<div class="bookmarklet group" ng-repeat = "grp in groupsView">';
@@ -16,7 +19,6 @@ content += '</div>';
 content += '</div>';
 div.innerHTML = content;
 var rootDiv = document.body.firstChild;
-console.log(rootDiv);
 document.body.insertBefore(div,rootDiv);
 var app = angular.module('bookmarklet', []);
 
