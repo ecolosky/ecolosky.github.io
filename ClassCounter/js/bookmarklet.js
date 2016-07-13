@@ -62,7 +62,7 @@
 
   // Loading style definitions
   loadStyles([
-    appRoot + 'css/bootstrap.min.css',
+    // appRoot + 'css/bootstrap.min.css',
     appRoot + 'css/style.css'
   ]);
 

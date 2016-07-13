@@ -1,12 +1,16 @@
 //  analyze css classes
 // populate class objects
 var classes = {};
+var maxCount = 0;
 [].forEach.call(document.querySelectorAll("*"), function(element) {
   if (element.className) {
     var tempClassArr = element.className.split(" ");
     for(i in tempClassArr) {
       if (tempClassArr[i] in classes) {
         classes[tempClassArr[i]] ++;
+        if(classes[tempClassArr[i]] > maxCount){
+          maxCount = classes[tempClassArr[i]];
+        }
       }else{
         classes[tempClassArr[i]] = 1;
       }
@@ -14,55 +18,59 @@ var classes = {};
   }
 });
 //group by frequency
-var groupsModel = [];
-for(key in classes){
-  // console.log(key);
-  // i will be equal to the count of each class - 1
-  var i = classes[key]-1;
-  // generate index if needed
-  while(groupsModel[i] == undefined){
-    groupsModel.push({classes: []});
-  }
-  groupsModel[i].classes.push(key);
-}
-
-var colorPicker = groupsModel.length-1;
-var maxCount = groupsModel.length;
-for(grp in groupsModel){
-  // clean up array of empty counts
-  if(groupsModel[grp].classes.length == 0 || groupsModel[grp].classes[0] == ""){
-    groupsModel[grp].classes.pop();
+var model = [];
+var colorPicker = maxCount;
+var darkBlue = false;
+var darkYellow = false;
+for(className in classes){
+  // console.log(className);
+  if(className == ""){
     continue;
   }
-  // organise classes alphabetically
-  groupsModel[grp].classes.sort();
+  // i will be equal to the count of each class - 1
+  var tempObj = {};
+  var count = classes[className];
+  tempObj.name = className;
   // assign count attribute
-  groupsModel[grp].count = parseInt(grp)+1;
+  tempObj.count = count;
 
   // alternate colors per line
-  if(colorPicker % 2 == 0){
+  if(tempObj.count % 2 == 0){
     // set to blue
-    groupsModel[grp].color = "label-primary"
+    if(darkBlue){
+      tempObj.color = "label-primary dark"
+    }
+    else{
+      tempObj.color = "label-primary"
+    }
+    darkBlue = !darkBlue;
   }
   else{
     // set to yellow
-    groupsModel[grp].color = "label-warning"
+    if(darkYellow){
+      tempObj.color = "label-warning dark"
+    }
+    else{
+      tempObj.color = "label-warning"
+    }
+    darkYellow = !darkYellow;
   }
-  colorPicker --;
+  // colorPicker --;
 
   // set size of text by normalizing count vector
-  var normalVal = (groupsModel[grp].count)/(maxCount) * 250
-  if(normalVal > 65){
-    groupsModel[grp].size = 'font-size: '+ normalVal.toString() + '%;';
+  var normalVal = (tempObj.count)/(maxCount) * 50
+  if(normalVal > 12){
+    tempObj.size = 'font-size: '+ normalVal.toString() + 'px;';
   }
   // size min threshold of 65
   else{
-    groupsModel[grp].size = 'font-size: 65%;';
+    tempObj.size = 'font-size: 12px;';
   }
+  model.push(tempObj);
 }
-groupsModel.reverse();
+
 
 // write to localstorage
-var dataModel = JSON.stringify(groupsModel);
+var dataModel = JSON.stringify(model);
 dataModel = btoa(dataModel);
 localStorage.setItem('_dataModel', dataModel);
