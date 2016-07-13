@@ -2,11 +2,7 @@
     position: absolute;
     z-index: 1000;
     background-color: white;
-    width: 100vw;
-    padding-top: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-bottom: 5px;
+    width: inherit;
 }
 span.label.class {
     display: inline-block;
@@ -25,3 +21,13 @@ span.bookmarklet.class.badge {
     margin-bottom: 10px;
     display: block;
   }
+  .bookmarklet.inner {
+    background-color: #EBEBEB;
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 30px;
+}
+  h2.bookmarklet.title {
+    color: #00709B;
+}

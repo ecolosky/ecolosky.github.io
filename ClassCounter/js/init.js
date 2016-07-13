@@ -9,7 +9,7 @@
 var div = document.createElement('div');
 div.setAttribute('ng-controller', 'AController');
 var content = '<div class="bookmarklet outer" >';
-content += '<div class = "bookmarklet header"><h2><b>Class</b>Counter</h2></div>';
+content += '<div class = "bookmarklet header"><h2 class="bookmarklet title"><b>Class</b>Counter</h2></div>';
 content += '<div class = "bookmarklet inner">';
 content += '<div class="bookmarklet group" ng-repeat = "grp in groupsView">';
 content += '<span class="bookmarklet class badge">{{grp.count}}</span>'
