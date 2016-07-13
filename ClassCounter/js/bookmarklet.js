@@ -4,7 +4,7 @@
 // 			  July, 2016
 // =================================================================
 (function(){
-
+  var appRoot = 'http://edcolosky.com/ClassCounter/';
   // Load the script from url and when it's ready loading run the callback.
   function loadScript(url, callback) {
     var script = document.createElement('script');
@@ -58,7 +58,7 @@
     }
   };
 
-  var appRoot = 'http://localhost:8080/ClassCounter/';
+
 
   // Loading style definitions
   loadStyles([
