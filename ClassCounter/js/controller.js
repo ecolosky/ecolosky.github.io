@@ -11,26 +11,21 @@ app.controller('AController', function($scope, $attrs) {
   dataModel = atob(dataModel);
   dataModel = JSON.parse(dataModel);
   $scope.view = dataModel;
-  console.log(dataModel);
 
-  $scope.bttnName = 'Ordered List';
-
-  $scope.changeOrder = function(task){
-    if($scope.bttnName == 'Ordered List'){
-      // sort content
-        var sortedDataModel = dataModel.slice(0);
-        sortedDataModel.sort(function(a,b){
-          return b.count -a.count;
-        });
-      $scope.view = sortedDataModel;
-      $scope.bttnName = 'Word Cloud';
-    }
-    else{
-      $scope.view = dataModel;
-      $scope.bttnName = 'Ordered List';
-    }
-
-  };
+// button to switch view
+  // $scope.bttnName = 'Word cloud';
+  // $scope.changeOrder = function(task){
+  //   if($scope.bttnName == 'Ordered arrangement'){
+  //     // sort content
+  //     $scope.view = sortedDataModel;
+  //     $scope.bttnName = 'Word cloud';
+  //   }
+  //   else{
+  //     $scope.view = dataModel;
+  //     $scope.bttnName = 'Ordered arrangement';
+  //   }
+  //
+  // };
   $scope.close = function(){
     document.getElementById('bookmarklet root').remove();
   };

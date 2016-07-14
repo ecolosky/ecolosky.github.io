@@ -69,8 +69,18 @@
 
   // Loading the scripts
   loadScripts([
-    'https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js',
-    // appRoot + 'angular-ui-bootstrap/dist/ui-bootstrap-tpls.js',
+    appRoot + "node_modules/jquery/dist/jquery.js",
+    appRoot + "node_modules/jquery-bridget/jquery-bridget.js",
+    appRoot + "node_modules/ev-emitter/ev-emitter.js",
+    appRoot + "node_modules/desandro-matches-selector/matches-selector.js",
+    appRoot + "node_modules/fizzy-ui-utils/utils.js",
+    appRoot + "node_modules/get-size/get-size.js",
+    appRoot + "node_modules/outlayer/item.js",
+    appRoot + "node_modules/outlayer/outlayer.js",
+    appRoot + "node_modules/masonry-layout/masonry.js",
+    appRoot + "node_modules/imagesloaded/imagesloaded.js",
+    appRoot + "node_modules/angular/angular.js",
+    appRoot + "node_modules/angular-masonry/angular-masonry.js",
     appRoot + 'js/analyzer.js',
     appRoot + 'js/init.js',
     appRoot + 'js/controller.js'
