@@ -1,10 +1,12 @@
 // ================================================================
-// 			  JS Script
+// 			  JS Script for setting up the bookmarlet
 // 			  Ed Colosky
 // 			  July, 2016
 // =================================================================
 (function(){
+  // remote code location
   var appRoot = 'http://edcolosky.com/ClassCounter/';
+
   // Load the script from url and when it's ready loading run the callback.
   function loadScript(url, callback) {
     var script = document.createElement('script');
@@ -20,11 +22,9 @@
           this.readyState === 'complete')
         ) {
         done = true;
-
         // Continue code
         callback();
-
-        // Handle memory leak in IE
+        // Handle memory leak in IE just in case
         script.onload = script.onreadystatechange = null;
         document.head.removeChild(script);
       }
@@ -58,36 +58,29 @@
     }
   };
 
-
-
-  // Loading style definitions
+  // load style stylesheet
   loadStyles([
-    // appRoot + 'css/bootstrap.min.css',
     appRoot + 'css/style.css'
   ]);
 
+  //
+  if (document.getElementById('bookmarklet root') != undefined) throw new Error("bookmarklet is already running");
 
-  // Loading the scripts
-  loadScripts([
-    appRoot + "node_modules/jquery/dist/jquery.js",
-    appRoot + "node_modules/jquery-bridget/jquery-bridget.js",
-    appRoot + "node_modules/ev-emitter/ev-emitter.js",
-    appRoot + "node_modules/desandro-matches-selector/matches-selector.js",
-    appRoot + "node_modules/fizzy-ui-utils/utils.js",
-    appRoot + "node_modules/get-size/get-size.js",
-    appRoot + "node_modules/outlayer/item.js",
-    appRoot + "node_modules/outlayer/outlayer.js",
-    appRoot + "node_modules/masonry-layout/masonry.js",
-    appRoot + "node_modules/imagesloaded/imagesloaded.js",
-    appRoot + "node_modules/angular/angular.js",
-    appRoot + "node_modules/angular-masonry/angular-masonry.js",
+  console.log('now loading the scripts...');
+  // scripts to be loaded
+  var pendingScripts =
+  [
+    'https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js',
     appRoot + 'js/analyzer.js',
     appRoot + 'js/init.js',
     appRoot + 'js/controller.js'
-  ], function() {
-    // Initialization of angular app
+  ];
+  loadScripts(pendingScripts, function() {
+    // Initialization of angular app - manually bootstrapped to the document
     angular.element(document).ready(function($scope) {
-      angular.bootstrap(document, ['bookmarklet']);
+        angular.bootstrap(document, ['bookmarklet']);
+        console.log("bootstrapped angular app to page");
+        console.log("lift off!");
     });
   });
 

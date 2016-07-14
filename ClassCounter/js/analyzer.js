@@ -1,16 +1,23 @@
-//  analyze css classes
-// populate class objects
-var classes = [];
-var classCnt = {};
-var maxCount = 0;
+// ================================================================
+// 			  JS Script for grabbing css classes then preparing data attibutes
+//          for the controller to recieve.
+// 			  Ed Colosky
+// 			  July, 2016
+// =================================================================
+var classes = []; //array of class names
+var classCnt = {}; //hash table of their corresponding counts
+var maxCount = 0; //most frequent css class used to normalize font size
 [].forEach.call(document.querySelectorAll("*"), function(element) {
   if (element.className) {
     var tempClassArr = element.className.split(" ");
     for(i in tempClassArr) {
+      // if the class is not noted please do so
       if (classes.indexOf(tempClassArr[i]) == -1) {
         classes.push(tempClassArr[i]);
       }
+      // increment the class count
       classCnt[tempClassArr[i]] = (classCnt[tempClassArr[i]]||0) + 1;
+      // keep max count updated
       if(classCnt[tempClassArr[i]] > maxCount){
         maxCount = classCnt[tempClassArr[i]];
       }
@@ -24,25 +31,26 @@ classes.sort(function(a,b){
 });
 
 // init
-var model = [];
-var colorPicker = maxCount;
-var darkBlue = false;
-var darkYellow = false;
+var model = [];//master array for controller
+var darkBlue = false;//used for alternating colors
+var darkYellow = false;//also yes
 
-// prepare data for view
+// prepare data for controller
 for(index in classes){
+  // empty class names skipped
   if(classes[index] == ""){
     continue;
   }
 
+  // create class object
   var tempObj = {};
   var count = classCnt[classes[index]];
-  tempObj.name = classes[index];
-  // assign count attribute
-  tempObj.count = count;
+  tempObj.name = classes[index];//attach name attribute
+  tempObj.count = count;//attach count attribute
 
+  // determine color of label
   // alternate light/dark colors per class
-  if((index/classes.length) < 0.33 || (index/classes.length) > 0.66){
+  if((index/classes.length) < 0.15 || (index/classes.length) > 0.40 && (index/classes.length) < 0.75){
     // set to blue
     if(darkBlue){
       tempObj.color = "label-primary dark"
@@ -50,6 +58,7 @@ for(index in classes){
     else{
       tempObj.color = "label-primary"
     }
+    // switch
     darkBlue = !darkBlue;
   }
   else{
@@ -60,19 +69,22 @@ for(index in classes){
     else{
       tempObj.color = "label-warning"
     }
+    // switch
     darkYellow = !darkYellow;
   }
-  // colorPicker --;
 
-  // set size of text by normalizing count vector
-  var normalVal = (tempObj.count)/(maxCount) * 50
+  // set size of text based on count
+  // first normalize count vector
+  var normalVal = (.2+(tempObj.count)/(maxCount)) * 50
   if(normalVal > 12){
+    // attach style to object
     tempObj.size = 'font-size: '+ normalVal.toString() + 'px;';
   }
-  // size min threshold of 65
+  // size min threshold of 12
   else{
     tempObj.size = 'font-size: 12px;';
   }
+  // add to master array
   model.push(tempObj);
 }
 
@@ -81,3 +93,4 @@ for(index in classes){
 var dataModel = JSON.stringify(model);
 dataModel = btoa(dataModel);
 localStorage.setItem('_dataModel', dataModel);
+console.log("page analyzed and saved to local storage");

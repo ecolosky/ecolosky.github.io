@@ -4,28 +4,16 @@
 //      July, 2016
 //=============================================================================
 app.controller('AController', function($scope, $attrs) {
-
+  // pull data from local storage
   var dataModel = localStorage.getItem('_dataModel');
-  if (!dataModel) throw new Error("no data was stored in local storage for the controller");
+  if (!dataModel) throw new Error("no data was stored in local storage for the controller this is most likely a https page");
   localStorage.removeItem('_dataModel');
   dataModel = atob(dataModel);
   dataModel = JSON.parse(dataModel);
+  // attach data model to the scope decorator
   $scope.view = dataModel;
+  console.log("decorated the view with the data model");
 
-// button to switch view
-  // $scope.bttnName = 'Word cloud';
-  // $scope.changeOrder = function(task){
-  //   if($scope.bttnName == 'Ordered arrangement'){
-  //     // sort content
-  //     $scope.view = sortedDataModel;
-  //     $scope.bttnName = 'Word cloud';
-  //   }
-  //   else{
-  //     $scope.view = dataModel;
-  //     $scope.bttnName = 'Ordered arrangement';
-  //   }
-  //
-  // };
   $scope.close = function(){
     document.getElementById('bookmarklet root').remove();
   };
