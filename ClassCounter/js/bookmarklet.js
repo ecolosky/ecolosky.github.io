@@ -5,7 +5,7 @@
 // =================================================================
 (function(){
   // remote code location
-  var appRoot = 'http://localhost:8080/';
+  var appRoot = 'http://edcolosky.com/ClassCounter/';
 
   // Load the script from url and when it's ready loading run the callback.
   function loadScript(url, callback) {
