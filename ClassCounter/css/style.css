@@ -34,7 +34,7 @@
     margin-bottom: 0px;
 }
 /*X button css - based on bootstrap.css*/
-a.bookmarklet.close.button {
+a.bookmarklet.close{
   float: right;
     font-size: 30px;
     font-weight: 700;
