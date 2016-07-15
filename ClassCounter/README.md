@@ -1,10 +1,10 @@
 # ClassCounter
 you have one of two options to use this bookmarklet
 ### Option 1:
-got to my [website](http://edcolosky.com) on the home page at the top you can drag the link to your bookmark bar.
-#### drawbacks
-- the app will be rejected by some HTTPS websites because of their CSP.
-- Most HTTPS sites will allow you to load the mixed content via a warning in the address bar.
+Go to my [website](http://edcolosky.com) on the home page at the top you can drag the link for ClassCounter to your bookmark bar.
+##### Known Issues
+- The app will be rejected by HTTPS websites without specifically allowing mixed content in the browser.
+- Some pages will have a CSP that will block all scripts, take a look in the console.
 
 ### Option 2:
 Clone this code repository and host at the root on you own local HTTP server. I recommend using the Nodejs http-server.
